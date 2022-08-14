@@ -1,13 +1,22 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+import reportWebVitals from "./reportWebVitals";
+import App from "./components/App/App";
+import { StateProvider } from "./components/stateProvider/stateProvider";
+import reducer, { initialState } from "./components/Reducer/reducer";
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <App />
+    <StateProvider
+      initialState={initialState}
+      /* data at the begining */ reducer={reducer} /* data after manipulation*/
+    >
+      {/* here App is inside stateProvider so that every component can get access to the data layer */}
+      <App />
+    </StateProvider>
   </React.StrictMode>
 );
 

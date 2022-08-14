@@ -1,0 +1,41 @@
+.checkoutProduct{
+    display: flex;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: white;
+    height: 250px;
+    
+}
+
+.checkoutProductInfo{
+    padding-left: 20px;
+    text-align: left;
+    width: 100%;
+    padding-inline-start: 30px;
+}
+
+.removeButton{
+    background-color:  #ff7322;
+    border: 1px solid;
+    margin-top: 5px;
+    border-color: #a86134 #dc6d41 #ae491a;
+    color: #111;
+    height: 30px;
+    border-radius: 15px;
+}
+
+.checkoutProductImage{
+    object-fit: contain;
+    width:180px;
+    height: 180px;
+    
+}
+
+.checkoutProductRating{
+    display: flex;
+   
+}
+.chackoutProductTitle{
+    font-size: 15px;
+    font-weight: 800;
+}
